@@ -8,6 +8,10 @@ const { PORT } = process.env;
 app.use(cors());
 app.use(express.json());
 
+app.use('/', (req, res) => {
+    return res.status(200).json({ "msg": "Hello form Gateway" });
+});
+
 app.use('/api/posts', proxy('http://127.0.0.1:8001'));
 app.use('/comments', proxy('http://127.0.0.1:8002'));
 
