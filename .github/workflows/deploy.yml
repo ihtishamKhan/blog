@@ -1,9 +1,9 @@
-name: Node Github CI
+name: Deploy
 
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   test:
