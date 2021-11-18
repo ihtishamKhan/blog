@@ -9,9 +9,9 @@ app.use(express.json({ extended: false, limit: '50mb' }));
 
 
 
-// app.use('/', (req, res) => {
-//     return res.status(200).json({ "msg": "Hello form Posts" });
-// });
+app.get('/', (req, res) => {
+    return res.status(200).json({ "msg": "Hello form Posts" });
+});
 
 require('./server/routes')(app);
 app.listen(port, () => {

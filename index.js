@@ -16,6 +16,10 @@ app.use('/api/posts', proxy('http://127.0.0.1:8001'));
 app.use('/api/comments', proxy('http://127.0.0.1:8002'));
 
 
-app.listen(8000, () => {
+
+var server = app.listen(8000, () => {
     console.log(`Gateway is listening to 8000`);
 })
+
+
+module.exports = server
