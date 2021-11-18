@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/posts', proxy('http://127.0.0.1:8001'));
-app.use('/comments', proxy('http://127.0.0.1:8002'));
+app.use('/api/comments', proxy('http://127.0.0.1:8002'));
 
 
 app.listen(8000, () => {
