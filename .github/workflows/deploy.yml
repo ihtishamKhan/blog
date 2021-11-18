@@ -17,5 +17,5 @@ jobs:
         node-version: 14
     - run: npm install -g yarn
     - run: yarn install --frozen-lockfile
-    - run: yarn build
+    - run: ./node_modules/.bin/mocha ./test/test.js
         
