@@ -12,6 +12,10 @@ app.get('/', (req, res) => {
     return res.status(200).json({ "msg": "Hello form Gateway" });
 });
 
+app.get('/test-link', (req, res) => {
+    return res.status(200).json({ "msg": "Hello form deploy test" });
+});
+
 app.use('/api/posts', proxy('http://127.0.0.1:8001'));
 app.use('/api/comments', proxy('http://127.0.0.1:8002'));
 
